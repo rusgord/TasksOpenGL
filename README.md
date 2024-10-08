@@ -21,7 +21,9 @@
 Використання ООП реалізовано за допомогою розроблення власних класів, які наведено у файлах Figure.cs.
 ![Screenshot1.1 - testing the program when changing the window width](Screenshots/Screenshot_1_lab1.png)
 Рисунок 1.1 – Тестування програми при зміні ширини вікна
+
 ![Screenshot1.2 - testing the program when changing the window height](Screenshots/Screenshot_2_lab1.png)
+
 Рисунок 1.2 – Тестування програми при зміні висоти вікна
 
 ### Контроль виконання вимог та елементів завдання
