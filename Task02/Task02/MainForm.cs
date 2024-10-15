@@ -58,47 +58,48 @@ namespace Task02
                 renderControl1.Invalidate();
             }
         }
+
+        private void OnClick(object sender, MouseEventArgs e)
+        {
+            double sizeX = renderControl1.ClientRectangle.Width;
+            double sizeY = renderControl1.ClientRectangle.Height;
+
+            double trueY = sizeY - e.Y;
+
+            double buttonWidth = 50.0;
+            double buttonHeight = 25.0;
+            double spacing = 10.0;
+
+            double xStart = sizeX - (buttonWidth + spacing);
+            double yStart = sizeY - (buttonHeight + spacing);
+
+            for (int i = 0; i < 3; i++)
+            {
+                int k = 2;
+                double x = xStart - i * (buttonWidth + spacing);
+                double y = yStart;
+
+                if (e.X >= x && e.X <= x + buttonWidth && trueY >= y && trueY <= y + buttonHeight)
+                {
+                    renderControl1.DrawingMode = (DrawingMode)k - i;
+                    switch (k - i)
+                    {
+                        case 0:
+                            fillModeRB.Checked = true; break;
+                        case 1:
+                            lineModeRB.Checked = true; break;
+                        case 2:
+                            pointModeRB.Checked = true; break;
+                    }
+                    renderControl1.Invalidate();
+                    break;
+                }
+            }
+        }
+
+        private void OnHover(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-
-//private void OnClick(object sender, MouseEventArgs e)
-//{
-//    double sizeX = renderControl1.ClientRectangle.Right;
-//    double sizeY = renderControl1.ClientRectangle.Bottom;
-//    double size = Math.Min(sizeX, sizeY);
-
-//    //double trueY = sizeY - e.Y;
-//    //double trueX = (e.X / (sizeX - ((sizeX - sizeY) / 2))) * size;
-//    //double spacing = (size / 2) * 0.05;
-
-//    //for (int i = 0; i < 3; i++)
-//    //{
-//    //    double x = size - i * (size * 0.05 + spacing) - size * 0.05; 
-//    //    double y = size - (size * 0.025);
-
-//    //    if (trueX >= x && trueX <= x + (size * 0.05) && trueY >= y && trueY <= y + (size * 0.025))
-//    //    {
-//    //        renderControl1.DrawingMode = (DrawingMode)i;
-//    //        renderControl1.Invalidate();
-//    //        break;
-//    //    }
-//    //}
-//    double trueY = sizeY - e.Y;
-//    //double trueX = (e.X / (sizeX - ((sizeX - sizeY) / 2))) * size;
-
-//    double buttonWidth = size * 0.05;
-//    double buttonHeight = size * 0.025;
-//    double spacing = (sizeX / 2) * 0.05;
-//    for (int i = 0; i < 3; i++)
-//    {
-//        double x = sizeY - i * (buttonWidth + spacing) - buttonWidth;
-//        double y = sizeY - buttonHeight;
-
-//        if (e.X >= x && e.X <= x + buttonWidth && trueY >= y && trueY <= y + buttonHeight)
-//        {
-//            renderControl1.DrawingMode = (DrawingMode)i; 
-//            renderControl1.Invalidate(); 
-//            break; 
-//        }
-//    }
-//}
