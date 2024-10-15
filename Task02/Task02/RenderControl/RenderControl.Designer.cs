@@ -44,6 +44,7 @@ namespace Task02
             Size = new Size(480, 300);
             TextCodePage = 1251;
             Render += OnRender;
+            ContextCreated += RenderControl_ContextCreated;
             ResumeLayout(false);
         }
 
