@@ -1,4 +1,4 @@
-# Репозиторій для практичних робіт з M1.OpenGL.
+# Репозиторій для практичних робіт з M1.OpenGL
 ## Системна Інформація
 - Processor	AMD Ryzen 5 5600 6-Core Processor 3.50 GHz
 - RAM	32.0 GB (31.9 GB usable)
