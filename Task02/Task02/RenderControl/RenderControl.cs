@@ -34,6 +34,7 @@ namespace Task02
             gluOrtho2D(-size * maxSize, size * maxSize, -size * maxSize, size * maxSize);
 
             draw.DrawFigure(Verticales, Horizontales, 50, DrawingMode);
+            
 
             glLoadIdentity();
             glViewport(0, 0, Width, Height);
