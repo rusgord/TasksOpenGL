@@ -69,8 +69,8 @@ namespace Task03
             renderControl1.TextCodePage = 1251;
             renderControl1.XMax = 1.2D;
             renderControl1.XMin = -1.2D;
-            renderControl1.YMax = 1D;
-            renderControl1.YMin = -1D;
+            renderControl1.YMax = 12.650348738374163D;
+            renderControl1.YMin = -4.9394067118565008D;
             // 
             // nupxmin
             // 
@@ -78,7 +78,6 @@ namespace Task03
             nupxmin.DecimalPlaces = 1;
             nupxmin.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             nupxmin.Location = new System.Drawing.Point(604, 25);
-            nupxmin.Maximum = new decimal(new int[] { 0, 0, 0, 0 });
             nupxmin.Minimum = new decimal(new int[] { 100, 0, 0, int.MinValue });
             nupxmin.Name = "nupxmin";
             nupxmin.Size = new System.Drawing.Size(51, 23);

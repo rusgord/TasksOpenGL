@@ -21,12 +21,14 @@ namespace Task03
         private void OnChangedXmin(object sender, System.EventArgs e)
         {
             renderControl1.XMin = (double)nupxmin.Value;
+            nupxmin.Maximum = (decimal)((double)nupxmax.Value - 0.1);
             renderControl1.Invalidate();
         }
 
         private void OnChangedXmax(object sender, System.EventArgs e)
         {
             renderControl1.XMax = (double)nupxmax.Value;
+            nupxmax.Minimum = (decimal)((double)nupxmin.Value + 0.1);
             renderControl1.Invalidate();
         }
 
@@ -64,17 +66,20 @@ namespace Task03
                 lymin.Visible = false;
             }
             renderControl1.CustomChange = !renderControl1.CustomChange;
+            renderControl1.Invalidate();
         }
 
         private void OnChangedYmin(object sender, System.EventArgs e)
         {
             renderControl1.YMin = (double)nupymin.Value;
+            nupymin.Maximum = (decimal)((double)nupymax.Value - 0.1);
             renderControl1.Invalidate();
         }
 
         private void OnChangedYmax(object sender, System.EventArgs e)
         {
             renderControl1.YMax = (double)nupymax.Value;
+            nupymax.Minimum = (decimal)((double)nupymin.Value + 0.1);
             renderControl1.Invalidate();
         }
 

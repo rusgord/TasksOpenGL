@@ -31,6 +31,10 @@ namespace Task03
             glLoadIdentity();
 
             glViewport(0, 0, Width, Height);
+            if (!CustomChange)
+                (YMin, YMax) = drawFunction.FindMinMax(XMin, XMax, YMin, YMax, npoint, functionArray[ChosedFunc]);
+            YMax = Math.Min(YMax, 100);
+            YMin = Math.Max(YMin, -100);
             gluOrtho2D(XMin, XMax, YMin, YMax);
             drawFunction.DrawGrid(XMin, XMax, YMin, YMax);
             drawFunction.DrawCoordinateGrid(XMin, XMax, YMin, YMax);
