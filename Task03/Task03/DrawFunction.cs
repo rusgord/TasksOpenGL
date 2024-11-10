@@ -75,29 +75,6 @@ namespace Task03
 
                 glEnd();
             }
-            public (double, double) FindMinMax(double XMin, double XMax, double YMin, double YMax, double npoint, Func<double, double> func)
-            {               
-                double previousY = double.NaN;
-                double x = XMin;
-                double h = (XMax - XMin) / (npoint - 1);
-                double y = func(x);
-                double min;
-                double max;
-                min = max = y;
-                for (int i = 1; i < npoint; i++)
-                {
-                    previousY = y;
-                    x = XMin + i * h;
-                    y = func(x);
-
-                    if (y > max)                     
-                        max = y;                    
-                    if (y < min)
-                        min = y;
-                }
-                return (min, max);
-            }
-
 
             private void DrawPoint(double previousY, double x, double h, double y)
             {
