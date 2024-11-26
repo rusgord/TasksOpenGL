@@ -54,10 +54,8 @@ namespace Task02
             renderControl1.Name = "renderControl1";
             renderControl1.Size = new System.Drawing.Size(465, 325);
             renderControl1.TabIndex = 0;
-            renderControl1.TextCodePage = 1251;
+            renderControl1.TextCodePage = 65001;
             renderControl1.Verticales = 1;
-            renderControl1.MouseDown += OnClick;
-            renderControl1.MouseHover += OnHover;
             // 
             // horizontalUD
             // 

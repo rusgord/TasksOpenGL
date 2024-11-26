@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Drawing;
 
-namespace Task02
+namespace Task04
 {
     [ToolboxItem(true), ToolboxBitmap(typeof(RenderControl), "RenderControl.bmp"), DefaultEvent("")]
     partial class RenderControl
@@ -44,6 +44,7 @@ namespace Task02
             Size = new Size(480, 300);
             TextCodePage = 1251;
             Render += OnRender;
+            ContextCreated += Created;
             ResumeLayout(false);
         }
 
